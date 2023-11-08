@@ -1,10 +1,6 @@
 package com.examplevideo2.demo2.security.filters;
-
-
 import com.examplevideo2.demo2.security.jwt.JWTUtils;
 import com.examplevideo2.demo2.service.UseDetailsServiceImpl;
-
-
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,7 +13,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-
 import java.io.IOException;
 
 @Component
