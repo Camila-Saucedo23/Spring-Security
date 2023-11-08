@@ -1,18 +1,15 @@
 package com.examplevideo2.demo2;
-
-import java.util.Set;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+// import java.util.Set;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.password.PasswordEncoder;
-
-import com.examplevideo2.demo2.models.ERole;
-import com.examplevideo2.demo2.models.RoleEntity;
-import com.examplevideo2.demo2.models.UserEntity;
-import com.examplevideo2.demo2.repositories.UserRepository;
+// import org.springframework.context.annotation.Bean;
+// import org.springframework.security.crypto.password.PasswordEncoder;
+// import com.examplevideo2.demo2.models.ERole;
+// import com.examplevideo2.demo2.models.RoleEntity;
+// import com.examplevideo2.demo2.models.UserEntity;
+// import com.examplevideo2.demo2.repositories.UserRepository;
 
 @SpringBootApplication
 public class Demo2Application {
