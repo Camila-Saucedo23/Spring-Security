@@ -5,12 +5,12 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+//import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
@@ -23,12 +23,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Autowired
     private UseDetailsServiceImpl userDetailsService;
-
+    
     @Override
-    protected void doFilterInternal(@NonNull HttpServletRequest request,
-                                    @NonNull HttpServletResponse response,
-                                    @NonNull FilterChain filterChain) throws ServletException, IOException {
-
+    protected void doFilterInternal(@NotBlank HttpServletRequest request,
+                                    @NotBlank HttpServletResponse response,
+                                    @NotBlank FilterChain filterChain) throws ServletException, IOException{
         String tokenHeader = request.getHeader("Authorization");
 
         if(tokenHeader != null && tokenHeader.startsWith("Bearer ")){
@@ -45,5 +44,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
             }
         }
         filterChain.doFilter(request, response);
-    }
+
+}
+
 }
